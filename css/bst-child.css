@@ -73,6 +73,21 @@ PHOTO (AVATAR)
 
 }
 
+#photo{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+#photo:hover{
+	opacity: .8;
+}
+
+/*******************************************
+Main Page
+*******************************************/
+
+
+
 h1{
   font-family: 'Asap', Arial, sans-serif;
     font-weight: 400;
@@ -89,8 +104,11 @@ h1{
     }
 }
 
-
+.none{
+  display: none;
 }
+
+
 #text-header:after{
   width: 100%;
   height: 3px;
@@ -150,10 +168,11 @@ Navbar
 .navbar-default {
     background-color: #E6DD93;
     border-color: #e7e7e7;
-
+    z-index: 9989;
     font-size: 1.5em;
     color: #000000;
 }
+
 .navbar-brand {
 font-size: 1.1em;
 }
@@ -169,7 +188,7 @@ border-right: 1px solid #FFF;
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     padding-right: 20px;
-    z-index:99;
+
 }
 
 .navbar navbar-default navbar-fixed-bottom {
@@ -233,7 +252,6 @@ EDUCATION
   top: 0;
   content: ' ';
   display: block;
-  background: #35bbb5;
   background: -moz-linear-gradient(top,  #ffffff 0%, #35bbb5 7%, ##35bbb5 89%, #ffffff 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,##35bbb5), color-stop(89%,##35bbb5), color-stop(100%,#ffffff));
   background: -webkit-linear-gradient(top,  #ffffff 0%,#35bbb5 7%,##35bbb5 89%,#ffffff 100%);
@@ -242,6 +260,21 @@ EDUCATION
   background: linear-gradient(to bottom,  #ffffff 0%,##35bbb5 7%,##35bbb5 89%,#ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
 }
+
+
+  /*Fixes Left Green Bar in moblie*/
+@media (min-width: 320px) {
+  #education:before {
+    background: transparent;
+  }
+}
+@media (min-width: 768px) {
+  #education:before {
+    background: #35bbb5;
+  }
+}
+
+
 #education li{
   width: 100%;
   z-index: 2;
